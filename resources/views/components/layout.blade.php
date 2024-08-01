@@ -34,6 +34,11 @@
                                 <x-link href="/register" :active="request()->is('register')">Register</x-link>
                             </div>
                         @endguest
+                        @auth
+                            <div class="ml-4 flex items-center md:ml-6">
+                                <x-nav-link>Logout</x-nav>
+                            </div>
+                        @endauth
                     </div>
                     <div class="-mr-2 flex md:hidden">
                         <!-- Mobile menu button -->
