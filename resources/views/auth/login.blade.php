@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Register
+        Login
     </x-slot:heading>
     <form method="POST" action="/login">
         @csrf
@@ -12,7 +12,7 @@
                     <div class="sm:col-span-4">
                         <x-form-label for="email">Email</x-form-label>
                         <div class="mt-2">
-                            <x-form-input required type="email" name="email" id="email" />
+                            <x-form-input required type="email" name="email" id="email" :value="old('email')" />
                             <x-form-error name="email" />
                         </div>
                     </div>

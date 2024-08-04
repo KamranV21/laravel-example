@@ -35,9 +35,10 @@
                             </div>
                         @endguest
                         @auth
-                            <div class="ml-4 flex items-center md:ml-6">
-                                <x-nav-link>Logout</x-nav>
-                            </div>
+                            <form method="POST" action="/logout" class="ml-4 flex items-center md:ml-6">
+                                @csrf
+                                <x-form-button>Logout</x-form-button>
+                            </form>
                         @endauth
                     </div>
                     <div class="-mr-2 flex md:hidden">
